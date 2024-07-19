@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+{% block content %}
+
+        <!-- Hero Start -->
+        <div class="container-fluid bg-light py-6 my-6 mt-0" style="background-image:url('/static/img/ewaste1.png');background-repeat: no-repeat;" >
+            <div class="container text-center animated bounceInDown">
+                <h1 class="display-1 mb-4">Register</h1>
+                <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+                    <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+                    <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+                    <li class="breadcrumb-item text-dark" aria-current="page">Here</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Hero End -->
+         <h2>{{ error }}</h2>
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="p-5 bg-light rounded contact-form">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Register Here !!</small>
+                           
+                        </div>
+                        <div class="col-md-6 col-lg-7">
+                           
+                            <form method="POST">
+                                {% csrf_token %}
+                                <input type="text" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name" name="username" required>
+                                <input type="text" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Mobile no" name="mobnum" required>
+                                <input type="email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Email" name="mail" required>
+                                <input type="password" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Password" name="password" required>
+                                <input type="password" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Re-Password" name="repassword" required>
+                                <button class="w-100 btn btn-primary form-control p-3 border-primary bg-primary rounded-pill" type="submit">Regsiter</button>
+                            </form>
+                        </div>
+           
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        
+{% endblock %}
